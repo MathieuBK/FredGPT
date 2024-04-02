@@ -16,7 +16,7 @@ index = pinecone.Index(st.secrets["PINECONE_INDEX_NAME"])
 
 col1, col2 = st.columns([1,3])
 col1.image(
-            ".streamlit\Fred_Maulat.png",
+            ".streamlit/Fred_Maulat.png",
             # Manually Adjust the width of the image as per requirement
         )
 col2.header("🤝 FredGPT")
