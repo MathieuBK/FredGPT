@@ -14,6 +14,11 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 pinecone.init(api_key=st.secrets["PINECONE_API_KEY"], environment=st.secrets["PINECONE_ENVIRONMENT"])
 index = pinecone.Index(st.secrets["PINECONE_INDEX_NAME"])
 
+# Set up OpenAI API key
+openai.api_key = os.getenv["OPENAI_API_KEY"]
+pinecone.init(api_key=os.getenv["PINECONE_API_KEY"], environment=os.getenv["PINECONE_ENVIRONMENT"])
+index = pinecone.Index(os.getenv["PINECONE_INDEX_NAME"])
+
 col1, col2 = st.columns([1,3])
 col1.image(
             ".streamlit/Fred_Maulat.png",
