@@ -16,7 +16,7 @@ user_msg_container_html_template = '''
     <div style="width: auto; background-color: #F0F2F6; color:#262730; border-radius: 8px; padding-top: 10px; padding-left: 20px; padding-bottom: 10px; padding-right: 20px">
         $MSG
     </div>
-        <img src="https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png" style="max-width: 50px; max-height: 50px; float: right; border-radius: 50%; z-index:3; display: flex; justify-self: flex-end;">   
+        <img src="https://i.postimg.cc/xdFvvhbG/avatar-default.png" style="max-width: 50px; max-height: 50px; float: right; border-radius: 50%; z-index:3; display: flex; justify-self: flex-end;">   
 </div>
 '''
 
