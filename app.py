@@ -9,6 +9,9 @@ import pinecone
 
 load_dotenv()
 
+# --- SET PAGE CONFIG
+st.set_page_config(page_title="FredGPT", page_icon=":robot_face:")
+
 # Set up OpenAI API key
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 pinecone.init(api_key=st.secrets["PINECONE_API_KEY"], environment=st.secrets["PINECONE_ENVIRONMENT"])
