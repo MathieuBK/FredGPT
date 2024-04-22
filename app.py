@@ -104,13 +104,15 @@ for message in st.session_state.history:
 
 # User input prompt
 # st.write("")
-user_prompt = st.text_input("",
+user_prompt = st.text_input(" ",
                             # ":orange[Écrivez votre message :]",
                             key="prompt",
                             placeholder="Écrivez votre message...",
-                            on_change=generate_response,
-                            
+                            on_change=generate_response,                        
                             )
+
+# st.text_input(label, value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False, label_visibility="visible")
+# if "" error, add label_visibility="collapsed" in st.text_input and all relevant fields
 
 col1, col2 = st.columns([0.52, 0.5])
 col2.caption(":gray[©️ 2024 Copyright [Mathieu Bekkaye](https://mathieubk-personalwebsite.streamlit.app) - All rights reserved.]")
