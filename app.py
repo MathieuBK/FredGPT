@@ -26,6 +26,7 @@ col1, col2 = st.columns([1,3])
 
 with col1:
     st.write("")
+    st.write("")
     col1.image(
             ".streamlit/Fred_Maulat.png",
             # Manually Adjust the width of the image as per requirement
@@ -118,7 +119,7 @@ user_prompt = st.text_input(" ",
                             key="prompt",
                             placeholder="Écrivez votre message...",
                             on_change=generate_response,      
-                            label_visibility="collapsed"
+
                             )
 
 # st.text_input(label, value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False, label_visibility="visible")
