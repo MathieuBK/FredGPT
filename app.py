@@ -10,7 +10,7 @@ import pinecone
 load_dotenv()
 
 # --- SET PAGE CONFIG
-st.set_page_config(page_title="FredGPT", page_icon=":robot_face:")
+st.set_page_config(page_title="FredGPT", page_icon=":handshake:")
 
 # Set up OpenAI API key
 openai.api_key = st.secrets["OPENAI_API_KEY"]
@@ -23,14 +23,23 @@ pinecone.init(api_key=os.getenv("PINECONE_API_KEY"), environment=os.getenv("PINE
 index = pinecone.Index(os.getenv("PINECONE_INDEX_NAME"))
 
 col1, col2 = st.columns([1,3])
-col1.image(
+
+with col1:
+    st.write("")
+    col1.image(
             ".streamlit/Fred_Maulat.png",
             # Manually Adjust the width of the image as per requirement
-        )
-col2.header("🤝 FredGPT")
-col2.write("Bonjour, je suis FredGPT, une IA entraînée sur les 100 dernières vidéos de ma chaîne YouTube dédiée à la négociation. Posez-moi vos questions, et je ferai de mon mieux pour y répondre en vous fournissant les liens de vidéos pertinentes pour approfondir le sujet.")
+             )
 
-st.caption("---")
+with col2:
+     col1a, col2a = st.columns([0.01,10000])    
+     col2.header("🤝 FredGPT")
+
+with col2:
+     col1, col2 = st.columns([1,100])   
+     col2.write("Bonjour, je suis FredGPT, une IA entraînée sur les 100 dernières vidéos de ma chaîne YouTube dédiée à la négociation. Posez-moi vos questions, et je ferai de mon mieux pour y répondre en vous fournissant les liens de vidéos pertinentes pour approfondir le sujet.")
+
+# st.caption("---")
 
 # Define chat history storage
 if "history" not in st.session_state:
